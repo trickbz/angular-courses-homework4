@@ -1,0 +1,24 @@
+<mat-card>
+  <form (ngSubmit)="onSubmitFileSize()" ngForm #inputFileSizeForm>
+    <mat-form-field class="file-size-input" >
+      <input
+        matInput placeholder="File size (KB)"
+        [(ngModel)]="inputText"
+        type="number"
+        name="fileSize"
+        required
+      >
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+    >
+      Add file size
+    </button>
+
+    <div *ngFor="let fileSize of fileSizes">
+      <span appColorFileSize="{{getColorByFileSize(fileSize)}}">{{ fileSize | formatFileSize }}</span>
+    </div>
+  </form>
+</mat-card>

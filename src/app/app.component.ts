@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'homework4';
+  fileSizes: number[] = [
+    1024,
+    1048576,
+    500,
+    15,
+    531,
+    12320
+  ];
 }
